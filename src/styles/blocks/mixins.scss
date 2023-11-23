@@ -1,0 +1,23 @@
+@mixin container() {
+  display: flex;
+  margin: 0 150px;
+  border-left: $border;
+  border-right: $border;
+  @media (max-width: $desktop-width) {
+    margin: 0 20px;
+  }
+}
+
+@mixin montserrat($weight) {
+  font-family: "Montserrat", sans-serif;
+  font-weight: $weight;
+}
+
+@mixin raleway($weight) {
+  font-family: "Raleway", sans-serif;
+  font-weight: $weight;
+}
+
+@mixin transition($effect, $time) {
+  transition: $effect $time ease;
+}

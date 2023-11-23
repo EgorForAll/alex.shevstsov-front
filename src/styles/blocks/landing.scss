@@ -1,0 +1,147 @@
+.landing {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.landing__container {
+  position: relative;
+  @include container();
+  display: flex;
+  flex-grow: 5;
+  height: 100%;
+
+  &::before {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    content: '';
+    width: 390px;
+    height: 600px;
+    background-image: url('~assets/mentor.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    z-index: 3;
+  }
+}
+
+.landing__layout {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 50px 130px 1fr;
+}
+
+.grid-column {
+  position: relative;
+  border-right: $border;
+  &:nth-child(4) {
+    border-right: none;
+  }
+}
+
+.landing__title {
+  position: absolute;
+  width: 750px;
+  line-height: 87px;
+  color: #fff;
+  text-transform: uppercase;
+  margin-top: 40px;
+}
+
+.column-subtitle {
+  border-left: 1px solid #fff;
+}
+
+.landing__subtitle {
+  position: absolute;
+  color: rgba(255, 255, 255, 0.5);
+  @include raleway(400);
+  font-size: 16px;
+  line-height: 24px;
+  width: 675px;
+  margin-left: 25px;
+}
+
+.landing__book-button {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 94%;
+  height: 70px;
+  background-color: #fff;
+  border: 1px solid #fff;
+  @include transition(background-color, 0.3s);
+  background-image: url('~assets/arrow.svg');
+  background-repeat: no-repeat;
+  background-position: 98% 88%;
+  &:hover {
+    background-color: $hover-color;
+    border: 1px solid #fff;
+  }
+}
+
+.landing__free-button {
+  @extend .landing__book-button;
+  background-color: transparent;
+  @include transition(border, 0.3s);
+  &:hover {
+    background-color: transparent;
+    border: 1px solid $hover-color;
+  }
+}
+
+.landing__link {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-left: 15px;
+  width: 100%;
+  height: 100%;
+  @include raleway(600);
+  color: $color-blue;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 22px;
+  &::before {
+    position: absolute;
+    content: '';
+    width: 70px;
+    height: 1px;
+    rotate: 90deg;
+    top: 34;
+    right: 50px;
+    background-color: $color-blue;
+  }
+}
+
+.link-free {
+  color: #fff;
+  &::before {
+    background-color: #fff;
+  }
+}
+
+.white-link {
+  position: relative;
+}
+
+.landing-stats {
+  margin-top: 80px;
+  padding-left: 25px;
+  border-left: 1px solid #fff;
+  h3 {
+    @include montserrat(600);
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 40px;
+  }
+  span {
+    display: block;
+    color: rgba(255, 255, 255, 0.5);
+    @include montserrat(400);
+  }
+}
