@@ -9,31 +9,15 @@ const prod = document.querySelector('#prod')
 
 if (window.innerWidth < DESK_WIDTH) {
   subtitle.textContent = 'Ваш успех зависит от ваших действий'
+  firstLink.textContent = 'Записаться'
+  secondLink.textContent = 'Заказать звонок'
+  tech.textContent = 'техники'
+  prod.textContent = 'продуктивности'
 } else {
   subtitle.textContent =
     'Когда ваше время и энергия лучше сфокусированы, стремление к новым возможностям становится реальностью,  ваш успех зависит от ваших действий'
-}
-
-if (window.innerWidth < DESK_WIDTH) {
-  firstLink.textContent = 'Записаться'
-} else {
   firstLink.textContent = 'Записаться на консультацию'
-}
-
-if (window.innerWidth < DESK_WIDTH) {
-  secondLink.textContent = 'Заказать звонок'
-} else {
   secondLink.textContent = 'Бесплатная консультация'
-}
-
-if (window.innerWidth < DESK_WIDTH) {
-  tech.textContent = 'техники'
-} else {
   tech.textContent = 'техник для достижения целей'
-}
-
-if (window.innerWidth < DESK_WIDTH) {
-  prod.textContent = 'продуктивности'
-} else {
   prod.textContent = 'увеличение личной продуктивности'
 }
