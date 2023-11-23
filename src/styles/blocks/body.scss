@@ -13,6 +13,12 @@ body {
   background-repeat: no-repeat;
   background-size: 100% 100%;
 
+  @media (max-width: $desktop-width) {
+    background: url('~assets/background-small.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
+
   &::before {
     position: absolute;
     top: 0;
@@ -47,6 +53,9 @@ h1 {
   @include raleway(600);
   font-size: 65px;
   margin: 0;
+  @media (max-width: $desktop-width) {
+    font-size: 25px;
+  }
 }
 
 h2 {
