@@ -14,54 +14,60 @@
   <body>
     <header class="header">
       <div class="header__container">
-        <svg class="header__logo">
-          <use xlink:href="#logo"></use>
-        </svg>
-        <nav class="header__nav">
-          <a href="#" class="header__link">Обо мне</a>
-          <a href="#" class="header__link">Наставничество</a>
-          <a href="#" class="header__link">Мероприятия</a>
-          <a href="#" class="header__link">Кейсы</a>
-          <a href="#" class="header__link">Отзывы</a>
-          <a href="#" class="header__link">Контакты</a>
-        </nav>
-        <div class="header__phone">
-          <button
-            class="svg-button dropdown-toggle"
-            type="button"
-            data-bs-toggle="dropdown"
-            aria-expanded="false"
-          >
-            <svg class="header__burger">
-              <use xlink:href="#menu"></use>
-            </svg>
-          </button>
-          <button class="svg-button">
-            <svg class="header__phone-svg">
-              <use xlink:href="#phone"></use>
-            </svg>
-          </button>
-          <a href="tel:83451233445" class="header__link phone-link">8-345-123-34-45</a>
-          <ul class="dropdown-menu header__dropdown">
-            <li>
-              <a class="dropdown-item header__dropdown-item" href="#">Обо мне</a>
-            </li>
-            <li>
-              <a class="dropdown-item header__dropdown-item" href="#">Наставничество</a>
-            </li>
-            <li>
-              <a class="dropdown-item header__dropdown-item" href="#">Мероприятия</a>
-            </li>
-            <li>
-              <a class="dropdown-item header__dropdown-item" href="#">Кейсы</a>
-            </li>
-            <li>
-              <a class="dropdown-item header__dropdown-item" href="#">Отзывы</a>
-            </li>
-            <li>
-              <a class="dropdown-item header__dropdown-item" href="#">Контакты</a>
-            </li>
-          </ul>
+        <div class="grid-column logo-wrapper">
+          <svg class="header__logo">
+            <use xlink:href="#logo"></use>
+          </svg>
+        </div>
+        <div class="grid-column column-middle">
+          <nav class="header__nav">
+            <a href="#" class="header__link">Обо мне</a>
+            <a href="#" class="header__link">Наставничество</a>
+            <a href="#" class="header__link">Мероприятия</a>
+            <a href="#" class="header__link">Кейсы</a>
+            <a href="#" class="header__link">Отзывы</a>
+            <a href="#" class="header__link">Контакты</a>
+          </nav>
+        </div>
+        <div class="grid-column phone-wrapper">
+          <div class="header__phone">
+            <button
+              class="svg-button dropdown-toggle"
+              type="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <svg class="header__burger">
+                <use xlink:href="#menu"></use>
+              </svg>
+            </button>
+            <button class="svg-button">
+              <svg class="header__phone-svg">
+                <use xlink:href="#phone"></use>
+              </svg>
+            </button>
+            <a href="tel:83451233445" class="header__link phone-link">8-345-123-34-45</a>
+            <ul class="dropdown-menu header__dropdown">
+              <li>
+                <a class="dropdown-item header__dropdown-item" href="#">Обо мне</a>
+              </li>
+              <li>
+                <a class="dropdown-item header__dropdown-item" href="#">Наставничество</a>
+              </li>
+              <li>
+                <a class="dropdown-item header__dropdown-item" href="#">Мероприятия</a>
+              </li>
+              <li>
+                <a class="dropdown-item header__dropdown-item" href="#">Кейсы</a>
+              </li>
+              <li>
+                <a class="dropdown-item header__dropdown-item" href="#">Отзывы</a>
+              </li>
+              <li>
+                <a class="dropdown-item header__dropdown-item" href="#">Контакты</a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </header>
