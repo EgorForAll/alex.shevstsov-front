@@ -28,6 +28,9 @@ body {
     content: '';
     background-color: #133457de;
     z-index: -1;
+    @media (max-width: $desktop-width) {
+      display: none;
+    }
   }
 }
 
