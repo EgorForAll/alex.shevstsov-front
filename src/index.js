@@ -1,3 +1,78 @@
 import '@/styles/main.scss'
-import './js/dom'
-import './js/form'
+import '@/js/dom.js'
+import '@/js/form.js'
+import 'bootstrap/dist/js/bootstrap.js'
+import bootstrap from 'bootstrap/dist/js/bootstrap.js'
+
+const DESK_WIDTH = 1025
+const subtitle = document.querySelector('#subtitle')
+const firstLink = document.querySelector('#first-link')
+const secondLink = document.querySelector('#second-link')
+const tech = document.querySelector('#tech')
+const prod = document.querySelector('#prod')
+
+if (window.innerWidth < DESK_WIDTH) {
+  subtitle.textContent = 'Ваш успех зависит от ваших действий'
+  firstLink.textContent = 'Записаться'
+  secondLink.textContent = 'Заказать звонок'
+  tech.textContent = 'техники'
+  prod.textContent = 'продуктивности'
+} else {
+  subtitle.textContent =
+    'Когда ваше время и энергия лучше сфокусированы, стремление к новым возможностям становится реальностью,  ваш успех зависит от ваших действий'
+  firstLink.textContent = 'Записаться на консультацию'
+  secondLink.textContent = 'Бесплатная консультация'
+  tech.textContent = 'техник для достижения целей'
+  prod.textContent = 'увеличение личной продуктивности'
+}
+
+const nameCheck = (input) => /^[а-яА-ЯёЁa-zA-Z0-9]+$/.test(input.value.trim())
+
+const telephoneCheck = (input) =>
+  /^((8|\+7)[-]?)?(\(?\d{3}\)?[-]?)?[\d\- ]{7,10}$/.test(input.value)
+
+const formValidate = (form) => {
+  let errors = 0
+  const nameInput = form.querySelector('.user-name')
+  const phoneInput = form.querySelector('.user-phone')
+  const checkboxInput = form.querySelector('#checkbox')
+
+  if (!nameCheck(nameInput)) {
+    nameInput.classList.add('error')
+    errors++
+  }
+
+  if (!telephoneCheck(phoneInput)) {
+    phoneInput.classList.add('error')
+    errors++
+  }
+
+  if (checkboxInput.checked === false) {
+    checkboxInput.classList.add('error-checkbox')
+    errors++
+  }
+
+  return errors
+}
+
+const form = document.querySelector('#user-data')
+const order = new bootstrap.Offcanvas('#offcanvasExample1')
+const succesMsg = new bootstrap.Offcanvas('#offcanvasExample2')
+
+form.addEventListener('submit', (evt) => {
+  evt.preventDefault()
+  let errors = formValidate(form)
+  if (errors === 0) {
+    // let formData = new FormData(form);
+    // let response = fetch('mail.php', {
+    //   method: 'POST',
+    //   body: formData,
+    // })
+    // if (response.ok) {
+    //       order.hide()
+    // succesMsg.show()
+    // } else {
+    //   alert('Не удается установить соединение. Поробуйте еще раз')
+    // }
+  }
+})

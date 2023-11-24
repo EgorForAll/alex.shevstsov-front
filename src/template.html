@@ -94,8 +94,8 @@
               id="first-link"
               type="button"
               data-bs-toggle="offcanvas"
-              data-bs-target="#offcanvasExample"
-              aria-controls="offcanvasExample"
+              data-bs-target="#offcanvasExample1"
+              aria-controls="offcanvasExample1"
             >
               Записаться на консультацию
             </button>
@@ -104,8 +104,8 @@
               id="second-link"
               type="button"
               data-bs-toggle="offcanvas"
-              data-bs-target="#offcanvasExample"
-              aria-controls="offcanvasExample"
+              data-bs-target="#offcanvasExample1"
+              aria-controls="offcanvasExample1"
             >
               Бесплатная консультация
             </button>
@@ -129,7 +129,7 @@
         <div
           class="offcanvas offcanvas-start offcanvas-landing"
           tabindex="-1"
-          id="offcanvasExample"
+          id="offcanvasExample1"
           aria-labelledby="offcanvasExampleLabel"
         >
           <div class="offcanvas-header custom-header">
@@ -144,7 +144,7 @@
             </h5>
           </div>
           <div class="offcanvas-body">
-            <form action="" class="offcanvas-form" id="user-data">
+            <form class="offcanvas-form" id="user-data">
               <div class="form__item">
                 <label for="name" class="visually-hidden">Имя</label>
                 <input
@@ -160,7 +160,7 @@
                 <input
                   type="text"
                   id="phone"
-                  name="phone"
+                  name="telephone"
                   class="form__input user-phone"
                   placeholder="Телефон"
                 />
@@ -178,6 +178,30 @@
               </div>
               <button type="submit" class="form-submit">Заказать обратный звонок</button>
             </form>
+          </div>
+        </div>
+        <!-- Сообщение об успешной отправке, вне холста -->
+        <div
+          class="offcanvas offcanvas-start offcanvas-landing"
+          tabindex="-1"
+          id="offcanvasExample2"
+          aria-labelledby="offcanvasExampleLabel"
+        >
+          <div class="offcanvas-header custom-header">
+            <button
+              type="button"
+              class="btn-close btn-close-white custom-close-btn"
+              data-bs-dismiss="offcanvas"
+              aria-label="Закрыть"
+            ></button>
+            <h5 class="offcanvas-title custom-title" id="offcanvasExampleLabel">
+              Спасибо за заявку
+            </h5>
+          </div>
+          <div class="offcanvas-body success-body">
+            <h6 class="offcanvas-title custom-title success-title">
+              Я обязательно свяжусь с вами в ближайшее время.
+            </h6>
           </div>
         </div>
       </section>
@@ -298,10 +322,5 @@
         </g>
       </symbol>
     </svg>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
-      crossorigin="anonymous"
-    ></script>
   </body>
 </html>

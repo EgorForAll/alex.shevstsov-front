@@ -183,3 +183,14 @@
 .error-checkbox {
   border: 1px solid rgb(223, 70, 70);
 }
+
+.success-body {
+  justify-content: center;
+  display: flex;
+}
+
+.success-title {
+  font-size: 40px;
+  max-width: 400px;
+  text-align: center;
+}
