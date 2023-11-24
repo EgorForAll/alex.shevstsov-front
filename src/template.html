@@ -144,14 +144,26 @@
             </h5>
           </div>
           <div class="offcanvas-body">
-            <form action="" class="offcanvas-form">
+            <form action="" class="offcanvas-form" id="user-data">
               <div class="form__item">
                 <label for="name" class="visually-hidden">Имя</label>
-                <input type="text" id="name" class="form__input" placeholder="Имя" />
+                <input
+                  type="text"
+                  id="name"
+                  class="form__input user-name"
+                  placeholder="Имя"
+                  name="name"
+                />
               </div>
               <div class="form__item">
                 <label for="phone" class="visually-hidden">Телефон</label>
-                <input type="text" id="phone" class="form__input" placeholder="Телефон" />
+                <input
+                  type="text"
+                  id="phone"
+                  name="phone"
+                  class="form__input user-phone"
+                  placeholder="Телефон"
+                />
               </div>
               <div class="form__item checkbox-wrapper">
                 <input
