@@ -14,11 +14,13 @@
   <body>
     <header class="header">
       <div class="header__container">
+        <!-- сетка для наложения серых полос -->
         <div class="header__grid">
           <div class="grid-column"></div>
           <div class="grid-column"></div>
           <div class="grid-column"></div>
         </div>
+        <!-- элемента хэдера -->
         <svg class="header__logo">
           <use xlink:href="#logo"></use>
         </svg>
@@ -73,11 +75,13 @@
     <main>
       <section class="landing">
         <div class="landing__container">
+          <!-- сетка для наложения серых полос -->
           <div class="landing__layout-grid">
             <div class="grid-column"></div>
             <div class="grid-column"></div>
             <div class="grid-column"></div>
           </div>
+          <!-- сетка для расположения элементов -->
           <div class="grid-content">
             <h1 class="landing__title">Создаю условия для вашего успеха</h1>
             <div class="landing__subtitle" id="subtitle">
@@ -85,30 +89,26 @@
               становится реальностью, ваш успех зависит от ваших действий
             </div>
             <div class="man"></div>
-            <div class="landing__book-button first-link">
-              <button
-                class="landing__link"
-                id="first-link"
-                type="button"
-                data-bs-toggle="offcanvas"
-                data-bs-target="#offcanvasExample"
-                aria-controls="offcanvasExample"
-              >
-                Записаться на консультацию
-              </button>
-            </div>
-            <div class="landing__free-button second-link">
-              <button
-                class="landing__link link-free"
-                id="second-link"
-                type="button"
-                data-bs-toggle="offcanvas"
-                data-bs-target="#offcanvasExample"
-                aria-controls="offcanvasExample"
-              >
-                Бесплатная консультация
-              </button>
-            </div>
+            <button
+              class="landing__book-button"
+              id="first-link"
+              type="button"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#offcanvasExample"
+              aria-controls="offcanvasExample"
+            >
+              Записаться на консультацию
+            </button>
+            <button
+              class="landing__free-button"
+              id="second-link"
+              type="button"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#offcanvasExample"
+              aria-controls="offcanvasExample"
+            >
+              Бесплатная консультация
+            </button>
             <div class="landing-stats tech">
               <h3>130+</h3>
               <span id="tech"
@@ -125,6 +125,7 @@
             </div>
           </div>
         </div>
+        <!-- форма заявки, вне холста -->
         <div
           class="offcanvas offcanvas-start offcanvas-landing"
           tabindex="-1"
@@ -169,6 +170,7 @@
         </div>
       </section>
     </main>
+    <!-- SVG спрайт -->
     <svg style="display: none">
       <symbol width="170" height="34" viewBox="0 0 170 34" fill="none" id="logo">
         <path

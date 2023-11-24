@@ -117,7 +117,10 @@
 
 .form-submit {
   position: relative;
-  width: 310px;
+  display: flex;
+  align-items: center;
+  padding-left: 30px;
+  width: 380px;
   height: 70px;
   border: 1px solid #fff;
   @include raleway(600);
@@ -126,9 +129,10 @@
   color: #fff;
 
   @media (max-width: $desktop-width) {
-    width: 206px;
+    width: 250px;
     height: 50px;
     font-size: 14px;
+    padding-left: 15px;
     line-height: 17px;
     transform: translateY(-2px);
   }
@@ -137,22 +141,23 @@
     position: absolute;
     content: '';
     width: 70px;
-    height: 70px;
-    top: -1px;
-    right: -70px;
-    border: 1px solid #fff;
+    height: 1px;
+    top: 33px;
+    right: 30px;
+    background-color: #fff;
+    rotate: 90deg;
 
     @media (max-width: $desktop-width) {
-      width: 46px;
-      height: 50px;
-      right: -46px;
+      right: 15px;
+      width: 50px;
+      top: 24px;
     }
   }
 
   &::after {
     position: absolute;
     bottom: 10px;
-    right: -60px;
+    right: 10px;
     width: 25px;
     height: 25px;
     content: '';
@@ -164,7 +169,7 @@
       width: 13px;
       height: 13px;
       bottom: 6px;
-      right: -39px;
+      right: 6px;
       background-image: url('~assets/vector.svg');
     }
   }

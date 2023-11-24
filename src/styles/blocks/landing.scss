@@ -105,8 +105,18 @@
 }
 
 .landing__book-button {
+  position: relative;
+  grid-area: 4 / 1 / 5 / 2;
   width: 94%;
   height: 70px;
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  @include raleway(600);
+  color: $color-blue;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 22px;
   background-color: #fff;
   border: 1px solid #fff;
   @include transition(background-color, 0.3s);
@@ -120,46 +130,18 @@
   }
 
   @media (max-width: $desktop-width) {
+    grid-area: 6 / 1 / 7 / 2;
     width: 170%;
     height: 30px;
+    font-size: 10px;
     background-image: url('~assets/arrow-small.svg');
   }
-}
 
-.landing__free-button {
-  @extend .landing__book-button;
-  background-color: transparent;
-  @include transition(border, 0.3s);
-  background-image: url('~assets/arrow-white.svg');
-  @media (max-width: $desktop-width) {
-    background-image: url('~assets/arrow-small-white.svg');
-  }
-  &:hover {
-    background-color: transparent;
-    border: 1px solid $hover-color;
-  }
-}
-
-.landing__link {
-  position: relative;
-  display: flex;
-  align-items: center;
-  margin-left: 15px;
-  width: 100%;
-  height: 100%;
-  @include raleway(600);
-  color: $color-blue;
-  text-decoration: none;
-  font-size: 18px;
-  line-height: 22px;
-  @media (max-width: $desktop-width) {
-    font-size: 10px;
-  }
   &::before {
     position: absolute;
     content: '';
     width: 70px;
-    height: 1px;
+    height: 2px;
     rotate: 90deg;
     top: 34;
     right: 30px;
@@ -167,26 +149,28 @@
 
     @media (max-width: $desktop-width) {
       width: 30px;
+      right: 15px;
     }
   }
 }
 
-.first-link {
-  grid-area: 4 / 1 / 5 / 2;
-  @media (max-width: $desktop-width) {
-    grid-area: 6 / 1 / 7 / 2;
-  }
-}
-
-.second-link {
+.landing__free-button {
   grid-area: 4 / 2 / 5 / 3;
+  @extend .landing__book-button;
+  background-color: transparent;
+  @include transition(border, 0.3s);
+  color: #fff;
+  background-image: url('~assets/arrow-white.svg');
   @media (max-width: $desktop-width) {
     grid-area: 7 / 1 / 8 / 2;
     margin-top: 10px;
+    background-image: url('~assets/arrow-small-white.svg');
   }
-}
-.link-free {
-  color: #fff;
+  &:hover {
+    background-color: transparent;
+    border: 1px solid $hover-color;
+  }
+
   &::before {
     background-color: #fff;
   }
