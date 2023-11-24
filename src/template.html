@@ -86,12 +86,28 @@
             </div>
             <div class="man"></div>
             <div class="landing__book-button first-link">
-              <a href="#" class="landing__link" id="first-link">Записаться на консультацию</a>
+              <button
+                class="landing__link"
+                id="first-link"
+                type="button"
+                data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasExample"
+                aria-controls="offcanvasExample"
+              >
+                Записаться на консультацию
+              </button>
             </div>
             <div class="landing__free-button second-link">
-              <a href="#" class="landing__link link-free" id="second-link"
-                >Бесплатная консультация
-              </a>
+              <button
+                class="landing__link link-free"
+                id="second-link"
+                type="button"
+                data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasExample"
+                aria-controls="offcanvasExample"
+              >
+                Бесплатная консультация
+              </button>
             </div>
             <div class="landing-stats tech">
               <h3>130+</h3>
@@ -107,6 +123,48 @@
                 личной продуктивности</span
               >
             </div>
+          </div>
+        </div>
+        <div
+          class="offcanvas offcanvas-start offcanvas-landing"
+          tabindex="-1"
+          id="offcanvasExample"
+          aria-labelledby="offcanvasExampleLabel"
+        >
+          <div class="offcanvas-header custom-header">
+            <button
+              type="button"
+              class="btn-close btn-close-white custom-close-btn"
+              data-bs-dismiss="offcanvas"
+              aria-label="Закрыть"
+            ></button>
+            <h5 class="offcanvas-title custom-title" id="offcanvasExampleLabel">
+              Закажите обратный звонок
+            </h5>
+          </div>
+          <div class="offcanvas-body">
+            <form action="" class="offcanvas-form">
+              <div class="form__item">
+                <label for="name" class="visually-hidden">Имя</label>
+                <input type="text" id="name" class="form__input" placeholder="Имя" />
+              </div>
+              <div class="form__item">
+                <label for="phone" class="visually-hidden">Телефон</label>
+                <input type="text" id="phone" class="form__input" placeholder="Телефон" />
+              </div>
+              <div class="form__item checkbox-wrapper">
+                <input
+                  type="checkbox"
+                  id="checkbox"
+                  class="form-check-input form__checkebox"
+                  checked
+                />
+                <label for="phone" class="form-label"
+                  >Согласен на сохранение и обработку персональных данных</label
+                >
+              </div>
+              <button type="submit" class="form-submit">Заказать обратный звонок</button>
+            </form>
           </div>
         </div>
       </section>
