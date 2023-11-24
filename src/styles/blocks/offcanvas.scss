@@ -185,8 +185,9 @@
 }
 
 .success-body {
-  justify-content: center;
+  flex-direction: column;
   display: flex;
+  align-items: center;
 }
 
 .success-title {
@@ -199,4 +200,11 @@
     font-size: 18px;
     line-height: 25px;
   }
+}
+
+.success-svg {
+  margin-left: auto;
+  width: 170px;
+  height: 35px;
+  margin-top: 170px;
 }

@@ -31,8 +31,9 @@ let xhr1 = new XMLHttpRequest()
 xhr1.open('GET', 'date.php', false)
 xhr1.send()
 const numberDate = xhr1.responseText
-
-numberDomElement.textContent = `${numberDate}+`
+if (numberDate) {
+  numberDomElement.textContent = `${numberDate}+`
+}
 
 // Получаем курс фунта стрерлинга
 const moneyDomElement = document.querySelector('#money')
@@ -40,7 +41,9 @@ let xhr2 = new XMLHttpRequest()
 xhr2.open('GET', 'gbr.php', false)
 xhr2.send()
 const moneyValue = xhr2.responseText
-moneyDomElement.textContent = `${moneyValue}%`
+if (moneyValue) {
+  moneyDomElement.textContent = `${moneyValue}%`
+}
 
 // Валидация формы
 const nameInput = document.querySelector('.user-name')
