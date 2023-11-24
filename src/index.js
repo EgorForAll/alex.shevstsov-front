@@ -1,6 +1,4 @@
 import '@/styles/main.scss'
-import '@/js/dom.js'
-import '@/js/form.js'
 import 'bootstrap/dist/js/bootstrap.js'
 import bootstrap from 'bootstrap/dist/js/bootstrap.js'
 
@@ -26,25 +24,38 @@ if (window.innerWidth < DESK_WIDTH) {
   prod.textContent = 'увеличение личной продуктивности'
 }
 
+const nameInput = document.querySelector('.user-name')
+const phoneInput = document.querySelector('.user-phone')
+const checkboxInput = document.querySelector('#checkbox')
+
+if (localStorage.name) {
+  nameInput.value = localStorage.name
+}
+
+if (localStorage.telephone) {
+  phoneInput.value = localStorage.telephone
+}
+
 const nameCheck = (input) => /^[а-яА-ЯёЁa-zA-Z0-9]+$/.test(input.value.trim())
 
 const telephoneCheck = (input) =>
   /^((8|\+7)[-]?)?(\(?\d{3}\)?[-]?)?[\d\- ]{7,10}$/.test(input.value)
 
-const formValidate = (form) => {
+const formValidate = () => {
   let errors = 0
-  const nameInput = form.querySelector('.user-name')
-  const phoneInput = form.querySelector('.user-phone')
-  const checkboxInput = form.querySelector('#checkbox')
 
   if (!nameCheck(nameInput)) {
     nameInput.classList.add('error')
     errors++
+  } else {
+    localStorage.setItem('name', nameInput.value)
   }
 
   if (!telephoneCheck(phoneInput)) {
     phoneInput.classList.add('error')
     errors++
+  } else {
+    localStorage.setItem('telephone', phoneInput.value)
   }
 
   if (checkboxInput.checked === false) {
@@ -63,16 +74,16 @@ form.addEventListener('submit', (evt) => {
   evt.preventDefault()
   let errors = formValidate(form)
   if (errors === 0) {
-    // let formData = new FormData(form);
-    // let response = fetch('mail.php', {
-    //   method: 'POST',
-    //   body: formData,
-    // })
-    // if (response.ok) {
-    //       order.hide()
-    // succesMsg.show()
-    // } else {
-    //   alert('Не удается установить соединение. Поробуйте еще раз')
-    // }
+    let formData = new FormData(form)
+    let response = fetch('send.php', {
+      method: 'POST',
+      body: formData,
+    })
+    if (!response.ok) {
+      order.hide()
+      succesMsg.show()
+    } else {
+      alert('Не удается установить соединение. Поробуйте еще раз')
+    }
   }
 })
