@@ -100,14 +100,10 @@
   }
 }
 
-.header__phone {
-  justify-self: end;
+.header__right-links {
   @media (max-width: $desktop-width) {
     display: flex;
   }
-}
-.phone-wrapper {
-  justify-self: end;
 }
 
 .header__dropdown {

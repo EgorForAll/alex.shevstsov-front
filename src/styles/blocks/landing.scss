@@ -84,7 +84,7 @@
   @media (max-width: $desktop-width) {
     grid-area: 2 / 1 / 3 / 3;
     line-height: 33px;
-    width: 103%;
+    width: 123%;
   }
 }
 
@@ -120,7 +120,7 @@
   }
 
   @media (max-width: $desktop-width) {
-    width: 126px;
+    width: 170%;
     height: 30px;
     background-image: url('~assets/arrow-small.svg');
   }
