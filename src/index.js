@@ -2,6 +2,7 @@ import '@/styles/main.scss'
 import 'bootstrap/dist/js/bootstrap.js'
 import bootstrap from 'bootstrap/dist/js/bootstrap.js'
 
+// Определяем содержимое DOM элементов исходя из размеров экрана
 const DESK_WIDTH = 1025
 const subtitle = document.querySelector('#subtitle')
 const firstLink = document.querySelector('#first-link')
@@ -24,6 +25,24 @@ if (window.innerWidth < DESK_WIDTH) {
   prod.textContent = 'увеличение личной продуктивности'
 }
 
+// Получаем сумму цифр даты и вставляем ее в DOM
+const numberDomElement = document.querySelector('#numberDate')
+let xhr1 = new XMLHttpRequest()
+xhr1.open('GET', 'date.php', false)
+xhr1.send()
+const numberDate = xhr1.responseText
+
+numberDomElement.textContent = `${numberDate}+`
+
+// Получаем курс фунта стрерлинга
+const moneyDomElement = document.querySelector('#money')
+let xhr2 = new XMLHttpRequest()
+xhr2.open('GET', 'gbr.php', false)
+xhr2.send()
+const moneyValue = xhr2.responseText
+moneyDomElement.textContent = `${moneyValue}%`
+
+// Валидация формы
 const nameInput = document.querySelector('.user-name')
 const phoneInput = document.querySelector('.user-phone')
 const checkboxInput = document.querySelector('#checkbox')
